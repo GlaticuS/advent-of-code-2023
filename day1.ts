@@ -1,3 +1,4 @@
+// https://adventofcode.com/2023/day/1 some input from this task
 const input = `shrzvdcghblt21
 sixdddkcqjdnzzrgfourxjtwosevenhg9
 threevt1onegxgvc9flk
@@ -9,6 +10,7 @@ six1vvrlxx8two
 znmfvdlhvjtwo9three4tzjqcfcgnsevenccvnsjczlpm
 `;
 
+// Object of words-to-number and some extra cases (like merging numbers) to work with
 let numberNamesObject: { [key: string]: string; } = {
     'one': '1',
     'two': '2',
@@ -29,6 +31,7 @@ let numberNamesObject: { [key: string]: string; } = {
     'eightwo': '82',
 };
 
+// regexp for replacing words to digits
 let numberRegexp = /(twone)|(sevenine)|(oneight)|(threeight)|(nineight)|(fiveight)|(eighthree)|(eightwo)|(one)|(two)|(three)|(four)|(five)|(six)|(seven)|(eight)|(nine)/g
 
 function getCalNumber(str: string): number {
@@ -46,7 +49,7 @@ function getNumberStringFromWordsAndDigits(str: string): string {
     }
 }
 
-
+// main work starts here
 let inputArray = input.split('\n');
 inputArray = inputArray.map(element => getNumberStringFromWordsAndDigits(element));
 
