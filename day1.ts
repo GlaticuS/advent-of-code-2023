@@ -1,3 +1,4 @@
+// This is part 2 of first-day task
 // https://adventofcode.com/2023/day/1 some input from this task
 const input = `shrzvdcghblt21
 sixdddkcqjdnzzrgfourxjtwosevenhg9
